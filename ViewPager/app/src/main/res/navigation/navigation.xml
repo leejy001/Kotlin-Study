@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/foodMenuFragment">
+    <fragment
+        android:id="@+id/foodMenuFragment"
+        android:name="com.example.viewpager.FoodMenuFragment"
+        android:label="FoodMenuFragment" >
+        <action
+            android:id="@+id/action_foodMenuFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.example.viewpager.detail.FoodDetailFragment"
+        android:label="FoodDetailFragment" >
+        <action
+            android:id="@+id/action_foodDetailFragment_to_foodMenuFragment"
+            app:destination="@id/foodMenuFragment" />
+    </fragment>
+</navigation>
